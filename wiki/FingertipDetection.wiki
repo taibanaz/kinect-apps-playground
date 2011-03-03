@@ -1,4 +1,5 @@
 #summary How to get setup and run fingertip detection code.
+#labels fingertipdetection,kinect
 
 = Introduction =
 
@@ -6,7 +7,7 @@ In order to run the fingertip detection code, you will need to install libfreene
 
 = Details =
 
-Assuming you are building on OS X -
+Assuming you are building on OS X -<br>
 1. Download libfreenect: https://github.com/OpenKinect/libfreenect<br>
 2. Install for OS X: http://openkinect.org/wiki/Getting_Started#OS_X
 
