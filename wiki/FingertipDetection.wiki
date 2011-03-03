@@ -13,9 +13,13 @@ Assuming you are building on OS X -<br>
 
 = Using Eclipse =
 
-This section describes how you can setup Eclipse Galileo to compile projects using libfreenect:
-* Create an Eclipse C++ project:
-** File -> New -> Project
-** C/C++ -> C++ Project
-** Project Type -> Executable -> Empty Project
-** Toolchains -> MacOSX GCC
+This section describes how you can setup Eclipse Galileo to compile projects using libfreenect:<br>
+1. Create an Eclipse C++ project:<br>
+2. File -> New -> Project<br>
+3. C/C++ -> C++ Project<br>
+4. Project Type -> Executable -> Empty Project<br>
+5. Toolchains -> MacOSX GCC<br>
+6. Enter project name (e.g. FingertipDetection)
+7. Click Finish
+8. Copy the code in kinect-apps-playground/fingertip-detect to the project directory
+9. 
