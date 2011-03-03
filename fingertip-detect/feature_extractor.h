@@ -26,47 +26,47 @@
  */
 class FeatureExtractor {
   public:
-	// A struct holding a vector segment.
-	struct VectorSegment {
-	public:
-		VectorSegment() {}
-		// Starting pixel of the segment
-		int start;
-		// Ending pixel of the segment
-		int end;
-	};
+  // A struct holding a vector segment.
+  struct VectorSegment {
+  public:
+    VectorSegment() {}
+    // Starting pixel of the segment
+    int start;
+    // Ending pixel of the segment
+    int end;
+  };
 
-	// Create a FeatureExtractor object for extracting fingertip features
-	// from a depth map of dimensions |w| x |h|.
-	FeatureExtractor(int w, int h)
-		: width(w),
-		  height(h) {}
-	~FeatureExtractor() {}
+  // Create a FeatureExtractor object for extracting fingertip features
+  // from a depth map of dimensions |w| x |h|.
+  FeatureExtractor(int w, int h)
+    : width(w),
+      height(h) {}
+  ~FeatureExtractor() {}
 
-	// Processes the depth map to detect fingertips. We do most of the work in the
-	// back buffer |depth_mid| of size width*height*3.
-	// @param {uint8_t*} depth_mid The depth map
-	// @param {int*} pixelDist The absolute pixel distance from the camera
-	// @param {int} The distance of th closest pixel from the camera
-	void Process(uint8_t *depth_mid, const int *pixelDist, const int minDist);
+  // Processes the depth map to detect fingertips. We do most of the work in the
+  // back buffer |depth_mid| of size width*height*3.
+  // @param {uint8_t*} depth_mid The depth map
+  // @param {int*} pixelDist The absolute pixel distance from the camera
+  // @param {int} The distance of th closest pixel from the camera
+  void Process(uint8_t *depth_mid, const int *pixelDist, const int minDist);
 
-	// Returns the vectors for the fingertips detected.
-	VectorSegment* GetFingerVectors() { return fingerVectors; }
+  // Returns the vectors for the fingertips detected.
+  VectorSegment* GetFingerVectors() { return fingerVectors; }
 
-	// Returns the number of fingertips detected.
-	int GetNumFingerTips() { return numFingerTips; }
+  // Returns the number of fingertips detected.
+  int GetNumFingerTips() { return numFingerTips; }
 
   private:
-	float getAngle(int i, int j, int k, int w, int h);
-	int getCentroid(int i, int j, int k, int w, int h);
+  float getAngle(int i, int j, int k, int w, int h);
+  int getCentroid(int i, int j, int k, int w, int h);
 
-	int pixelDist[FREENECT_FRAME_PIX];
-	short segBuff[FREENECT_FRAME_PIX];
-	short borderPixels[FREENECT_FRAME_PIX];
-	int extContour[50];
-	int width, height;
-	int numFingerTips;
-	VectorSegment fingerVectors[10];
+  int pixelDist[FREENECT_FRAME_PIX];
+  short segBuff[FREENECT_FRAME_PIX];
+  short borderPixels[FREENECT_FRAME_PIX];
+  int extContour[50];
+  int width, height;
+  int numFingerTips;
+  VectorSegment fingerVectors[10];
 };
 
 #endif  //FEATURE_EXTRACTOR_H_
