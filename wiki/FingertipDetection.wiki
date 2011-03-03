@@ -13,4 +13,4 @@ Assuming you are building on OS X -<br>
 
 = Using Eclipse =
 
-This section describes how you can setup Eclipse Galileo to compile projects using libfreenect.
+This section describes how you can setup Eclipse Galileo to compile projects using libfreenect.<br><br>
