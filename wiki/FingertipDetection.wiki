@@ -1,0 +1,15 @@
+#summary How to get setup and run fingertip detection code.
+
+= Introduction =
+
+In order to run the fingertip detection code, you will need to install libfreenect and its dependencies. This is currently tested only on OS X, but should work on any Linux machine.
+
+= Details =
+
+Assuming you are building on OS X -
+1. Download libfreenect: https://github.com/OpenKinect/libfreenect
+2. Install for OS X: http://openkinect.org/wiki/Getting_Started#OS_X
+
+= Using Eclipse =
+
+This section describes how you can setup Eclipse Galileo to compile projects using libfreenect.
