@@ -19,7 +19,15 @@ This section describes how you can setup Eclipse Galileo to compile projects usi
 3. C/C++ -> C++ Project<br>
 4. Project Type -> Executable -> Empty Project<br>
 5. Toolchains -> MacOSX GCC<br>
-6. Enter project name (e.g. "FingertipDetection")
-7. Click Finish
-8. Copy the code in kinect-apps-playground/fingertip-detect to the project directory
-9. 
+6. Enter project name (e.g. "Fingertip")<br>
+7. Click Finish<br>
+8. Copy the code in kinect-apps-playground/fingertip-detect to the project directory "Fingertip".<br>
+9. Project -> Properties -> C/C++ Build -> Setings<br>
+10. Tool Settings -> MacOS X C++ Linker<br>
+11. Set Command to g++<br>
+12. Add the following to All options: -framework GLUT -framework OpenGL<br>
+13. Tool Settings -> MacOS X C++ Linker -> Libraries<br>
+14. Libraries (-l) (Add): freenect, freenect_sync (Add both separately)<br>
+15. Tool Settings -> GCC C++ Linker -> Directories<br>
+16. Include paths (-I) (Add): /usr/local/include/libfreenect<br>
+17. Right click on project "Fingertip" in project explorer -> Clean Project<br>
