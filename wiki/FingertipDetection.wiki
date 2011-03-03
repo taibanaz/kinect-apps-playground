@@ -14,20 +14,23 @@ Assuming you are building on OS X -<br>
 = Using Eclipse =
 
 This section describes how you can setup Eclipse Galileo to compile projects using libfreenect:<br>
-1. Create an Eclipse C++ project:<br>
-2. File -> New -> Project<br>
-3. C/C++ -> C++ Project<br>
-4. Project Type -> Executable -> Empty Project<br>
-5. Toolchains -> MacOSX GCC<br>
-6. Enter project name (e.g. "Fingertip")<br>
-7. Click Finish<br>
-8. Copy the code in kinect-apps-playground/fingertip-detect to the project directory "Fingertip".<br>
-9. Project -> Properties -> C/C++ Build -> Setings<br>
-10. Tool Settings -> MacOS X C++ Linker<br>
-11. Set Command to g++<br>
-12. Add the following to All options: -framework GLUT -framework OpenGL<br>
-13. Tool Settings -> MacOS X C++ Linker -> Libraries<br>
-14. Libraries (-l) (Add): freenect, freenect_sync (Add both separately)<br>
-15. Tool Settings -> GCC C++ Linker -> Directories<br>
-16. Include paths (-I) (Add): /usr/local/include/libfreenect<br>
-17. Right click on project "Fingertip" in project explorer -> Clean Project<br>
+- Create an Eclipse C++ project:<br>
+- File -> New -> Project<br>
+- C/C++ -> C++ Project<br>
+- Project Type -> Executable -> Empty Project<br>
+- Toolchains -> MacOSX GCC<br>
+- Enter project name (e.g. "Fingertip")<br>
+- Click Finish<br>
+- Copy the code in kinect-apps-playground/fingertip-detect to the project directory "Fingertip".<br>
+- Project -> Properties -> C/C++ Build -> Setings<br>
+- Tool Settings -> MacOS X C++ Linker<br>
+- Set Command to g++<br>
+- Tool Settings -> MacOS X C++ Linker -> Libraries<br>
+- Libraries (-l) (Add): freenect, freenect_sync (Add both separately)<br>
+- Tool Settings -> MacOS X C++ Linker -> Miscellaneous<br>
+- Add to Linker flags: -framework GLUT -framework OpenGL<br>
+- Tool Settings -> GCC C++ Linker -> Directories<br>
+- Include paths (-I) (Add): /usr/local/include/libfreenect<br>
+- Right click on project "Fingertip" in project explorer -> Clean Project<br>
+
+Run the project as a Local C/C++ Application.
