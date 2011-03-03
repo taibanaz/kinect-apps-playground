@@ -13,4 +13,9 @@ Assuming you are building on OS X -<br>
 
 = Using Eclipse =
 
-This section describes how you can setup Eclipse Galileo to compile projects using libfreenect.<br><br>
+This section describes how you can setup Eclipse Galileo to compile projects using libfreenect:
+* Create an Eclipse C++ project:
+** File -> New -> Project
+** C/C++ -> C++ Project
+** Project Type -> Executable -> Empty Project
+** Toolchains -> MacOSX GCC
